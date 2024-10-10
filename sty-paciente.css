@@ -1,0 +1,17 @@
+.texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: sans-serif;
+   
+  }
+
+.paciente {
+display: flex;
+  justify-content: center; 
+  align-items: center; 
+  height: 100%;
+  size-adjust: auto;
+}
+
