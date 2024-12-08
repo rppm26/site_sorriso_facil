@@ -1,0 +1,36 @@
+.quadro-verde {
+    background-color: #72afb2; /* Cor verde */
+    padding: 20px;
+    border-radius: 10px;
+    width: 400pt;
+    text-align: center;
+    margin: auto;
+    margin-top: 200pt;
+  }
+  
+  .botao-cinza {
+    background-color: #72716d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    width: 200pt;
+    text-align: center; 
+  
+  }
+
+  .logo_trans img {
+    position: fixed;
+    top: 0px;
+    left: 10px;
+    height: 120px;
+    max-width: 280px;
+    
+  }
+
+
+ 

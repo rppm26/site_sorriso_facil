@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="esqueci.html">
+  <title>Login  | Sorriso Fácil</title>
+  <link rel="icon" href="logo_trans_menor.PNG" type="image/x-icon">
+ 
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color:   
+ #f4f4f4;
+    }
+
+    .container {
+      background-color: #72afb2;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      width: 400pt;
+    }
+
+    h2 {
+      text-align: center;
+      color: white; /* Cor do título */
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin: 7px 0;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      }
+
+    button[type="submit"] {
+      background-color: #72716d;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: large;
+      width: 100pt;
+      text-align: center;    
+    }
+  </style>
+ <link rel="stylesheet" href="sy-login.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>LOGIN</h2>
+    <form>
+        <label for="tipo_usuario">TIPO DE USUÁRIO</label>
+        <select id="tipo_usuario">
+          <option value="paciente">Paciente</option>
+          <option value="dentista">Dentista</option>
+          <option value="instituicao">Instituição</option>
+        </select>
+      <div>
+        <label for="email">E-MAIL:</label>
+        <input type="email" id="email" name="email" placeholder="digite seu e-mail"> 
+      </div>
+      <div>
+        <label for="senha">SENHA:<br> 
+        <input type="password" id="senha" name="senha" pattern="[0-9]+" title="Apenas números são permitidos" placeholder="digite sua senha de 06 dígitos">
+      </div>
+      <div>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <span>Salvar login e senha</span> 
+    </div>
+      <div class="botao">
+        <button type="submit">Enviar</button>
+      </div>
+      <div class="esqueci-senha" onclick="window.location.href='esqueci.html'">Esqueci a minha senha</div> 
+    </form> 
+         </form>
+  </div>
+  <div class="logo_trans">
+    <img src="logo_trans.png" alt="logo_trans">
+     
+  </div>
+  <script>
+    function validarFormulario() {
+      let email = document.getElementById("email").value;
+      let senha = document.getElementById("senha").value;
+     
+      if (email == "" || senha == "") {
+    alert("Por favor, preencha todos os campos.");
+    return false;
+  }
+
+  // Validação do email (verifica se contém "@" e se tem algo antes e depois do "@")
+  if (email.includes("@") || email.indexOf("@") === 0 || email.indexOf("@") === email.length - 1) {
+    alert("Faça a correspondência com o formato solicitado.");
+    return false;
+  }
+
+  // Validação da senha (verifica se tem apenas números)
+  if (/\D/.test(senha)) {
+    alert("Faça a correspondência com o formato solicitado.");
+    return false;
+  }
+
+  return true;
+
+  function validarEmail(email) {
+  // Expressão regular para validar o formato do email (mais completa)
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+}
+  </script>
+</body>
+</html>

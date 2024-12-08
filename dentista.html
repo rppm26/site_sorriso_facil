@@ -1,22 +1,156 @@
 <!DOCTYPE html>
-<html lang="port-br">
-    
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sou Dentista</title>
-    <link rel="stylesheet" href="sty-paciente.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro do(a) Dentista   | Sorriso Fácil</title>
+  <link rel="icon" href="logo_trans_menor.PNG" type="image/x-icon">
+ 
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color:   
+ #f4f4f4;
+    }
 
+    .container {
+      background-color: #72afb2;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+      width: 400pt;
+    }
 
+    h2 {
+      text-align: center;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+      width: 100%;
+      padding: 8px;
+      margin: 7px 0;
+      border-radius: 20px;
+      border: 1px solid #ddd;
+      }
+
+    button[type="submit"] {
+      background-color: #72716d;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: large;
+      width: 100pt;
+    
+    }
+  </style>
+ <link rel="stylesheet" href="sty-paciente.css">
 </head>
 <body>
-    <div class="texto">
-        <h1>Página em desenvolvimento.</h1>
+
+  <div class="container">
+    <h2>CADASTRO DO(A) DENTISTA</h2>
+    <form>
+      <div>
+        <label for="nome">NOME COMPLETO:</label>
+        <input type="text" id="nome" name="nome" required>
+      </div>
+      <div>
+        <label for="data">DATA DE NASCIMENTO:</label>
+        <input type="date" id="data" name="data" required>
+      </div>
+    <div class="container-campos">  
+      <div>
+          <label for="cpf">CPF:</label>
+          <input type="text" id="cpf" name="cpf" required>
+      </div>
+      <div>
+        <label for="numero_cro">NÚMERO DO CRO:</label>
+        <input type="text" id="numero_cro" name="numero_cro" required>
+      </div>
     </div>
-    
+    <div>
+      <div class="area-branca"> 
+        <label for="especialidade">1ª ESPECIALIDADE: (obrigatório)</label>
+        <select id="especialidade" name="especialidade">
+          <option value="clínico">Clínico Geral</option>
+          <option value="ortodontia">Ortodontia</option>
+          <option value="endodontia">Endodontia</option>
+          <option value="periodontia">Periodontia</option>
+          <option value="odontopediatria">Odontopediatria</option>
+          <option value="implante_e_outros">Implante e prótese dentária</option>
+          </select>
+      </div>
+      <div class="area-branca"> 
+        <label for="especialidade">2ª ESPECIALIDADE: (opcional)</label>
+        <select id="especialidade" name="especialidade">
+          <option value="branco"></option>
+          <option value="clínico">Clínico Geral</option>
+          <option value="ortodontia">Ortodontia</option>
+          <option value="endodontia">Endodontia</option>
+          <option value="periodontia">Periodontia</option>
+          <option value="odontopediatria">Odontopediatria</option>
+          <option value="implante_e_outros">Implante e prótese dentária</option>
+          </select>
+      </div>
+      <div>
+        <label for="endereço">ENDEREÇO:</label>
+        <input type="text" id="endereço" name="enderço" required>
+      </div>
+      <div>
+        <label for="cidade">CIDADE:</label>
+        <input type="text" id="cidade" name="cidade" required>
+      </div>
+      <div>
+        <label for="estado">ESTADO:</label>
+        <input type="text" id="estado" name="estado" required>
+      </div>
+      <div class="container-campos">  
+        <div>             
+          <label for="CEP">CEP:</label>
+          <input type="text" id= "CEP" name="CEP" required>
+        </div>
+        <div>
+         <label for="telefone">TELEFONE:</label>
+         <input type="text" id="telefone" name="telefone" required>
+        </div>
+      </div> 
+      <div>
+        <label for="e-mail">E-MAIL:</label>
+        <input type="text" id="e-mail" name="e-mail" required>
+      </div>
+      <div>
+        <label for="senha">SENHA:<br> <strong><span style="color: red;">** senha de 06 números **</span></strong></label>
+        <input type="text" id="senha" name="senha" required>
+      </div>
+    </div>
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      <strong class="switch-label">Desejo receber as informações e notificações de agendamentos por email e/ou SMS?</strong>
+    </div>
+    <div class="botao">
+      <button type="submit" onclick="salvarPaciente">Enviar</button>
+    </div>
+      
+         </form>
+         <div class="logo_trans">
+          <img src="logo_trans.png" alt="logo_trans">
+  </div>
+
 </body>
 </html>
-
-<div class=paciente>
-<img src="logo_trans.png" alt="logo_trans">
-</div>
